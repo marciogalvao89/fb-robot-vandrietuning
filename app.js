@@ -581,7 +581,7 @@ console.log("sendCustoMessage "+ messageText);
     switch (messageText.toLowerCase()) {
 
       case 'get_started_payload':
-        sendImageMessage(recipientId, "https://ecutune-db.com/thumbnail2.jpg");	
+        sendImageMessage(recipientId, "http://www.vandrietuning.nl/bot.jpg");	
         sendWelcomemessage(recipientId);
         break        
 
@@ -742,17 +742,12 @@ function sendButtonMessage(recipientId) {
         type: "template",
         payload: {
           template_type: "button",
-          text: "Informações & Marcações",
+          text: "Informations & Contacts",
           buttons:[
 		{
             "type": "phone_number",
-            "title": "Geral",
-            "payload": "+351265427946"
-          	},
-		 	{
-            "type": "phone_number",
-            "title": "Marcio",
-            "payload": "+351964131160"
+            "title": "Leo van Drie",
+            "payload": "+31641974649"
           	}
 	  ]
         }
@@ -765,7 +760,7 @@ function sendButtonMessage(recipientId) {
 
 function sendWelcomemessage(recipientId) {
 	
-  var nameString = "Olá " + firstName + " " + lastName + ",\r Iremos responder assim que possível! Caso queira informações para Aumento de Potencia ou Solução FAP, pode consultar o nosso Website. Se pretender o orçamento, Indique-nos a Marca/modelo/ano/motorização do seu veiculo!";
+  var nameString = "Hallo " + firstName + " " + lastName + ",\r Welkom op de Facebookpagina van Van Drie Tuning.\r Heeft u vragen? Stel deze gerust aan ons. Wilt u weten hoeveel vermogen u kunt winnen? Bezoek dan onze website voor meer informatie.";
   var messageData = {
     recipient: {
       id: recipientId
@@ -1180,19 +1175,19 @@ function addPersistentMenu(){
       "call_to_actions":[ 
         {
           "type":"web_url",
-          "title":"🏎  Simulador de Potencia",
-          "url":"http://rpmmotorsport.pt/aumento-de-potencia-2/",
+          "title":"🏎  Chiptuning Simulator",
+          "url":"http://vandrietuning.nl/chiptuning/",
           "webview_height_ratio":"full"
         },
         {
           "type":"web_url",
-          "title":"🚑 Soluções FAP",
-          "url":"http://fapremove.pt",
+          "title":"🚑 File Service",
+          "url":"http://vandrietuning.nl/file-service/",
           "webview_height_ratio":"full"
         },
 	{
             "type":"postback",
-            "title": "📞 Informações & Contactos",
+            "title": "📞 Informations & Contacts",
             "payload": "contactos"
         }
       ]
